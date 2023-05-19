@@ -5,12 +5,12 @@ import './Results.css';
 
 
 export default function Result(props){
-  console.log(props.results)
+  // console.log(props.results.meanings[0].definitions[0].definition)
   if (props.results) {
     return (
       <div className="Results">
         <div className="results-phonetic">
-          <h1>{props.results.word}</h1>
+          <h1 className="results-word">{props.results.word}</h1>
           {props.results.phonetics.map(function(phonetic, index){
             return (
               <div key={index}>
@@ -28,6 +28,8 @@ export default function Result(props){
             </div>
           )
         })}
+        {/* {props.results.meanings[0].definitions[0].definition} */}
+        {/* {props.results.meanings[0].definitions[0].definition} */}
       </div>
     )
   } else {

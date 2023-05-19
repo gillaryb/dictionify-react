@@ -1,0 +1,17 @@
+/* .Phonetic{
+  display: flex;
+  justify-content: space-between;
+} */
+
+.phonetic-audio-icon{
+  background: white;
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  border-radius: 25px;
+}
+
+.Phonetic p{
+  font-size:20px;
+  padding-left: 16px;
+}

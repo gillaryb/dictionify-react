@@ -1,8 +1,34 @@
-/* .Results{
-  background-color: #0D3B66;
-} */
+.Results{
+  padding-top: 16px;
+}
 
 .results-phonetic {
   background-color: #0D3B66;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px #b4aeae;
   color: #FFFF;
 }
+
+.results-phonetic h1{
+  padding-bottom: 12px;
+}
+
+.results-word{
+  display: flex;
+  justify-content: space-between;
+}
+/* {props.meaning.definitions.map(function(definition, index){
+  return (
+    <div key={index}>
+      <p>
+        {definition.definition}
+        {/* <em>
+          <strong>Example:</strong>{definition.example}
+        /* </em> */
+        /* <br />
+          <Synonyms synonyms={definition.synonyms} />
+      </p>
+    </div>
+  )
+})} */ 
