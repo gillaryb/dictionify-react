@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Results from './Results';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import './Dictionary.css';
+
 
 export default function Dictionary(){
   let [keyword, setKeyword] = useState("");
@@ -23,12 +26,16 @@ export default function Dictionary(){
   }
 
   return (
-    <div className="Dictionary">
-      <form onSubmit={handleSearch} className="dictionary-form">
-        <input type="search" onChange={keywordChange}
-        className="dictionary-search"/>
-      </form>
-      <Results results={result}/>
+    <div className="container">
+      <div className="Dictionary">
+        <form onSubmit={handleSearch} className="dictionary-form">
+        <FontAwesomeIcon icon={faMagnifyingGlass} className="dictionary-search-icon" />
+          <input type="search" onChange={keywordChange}
+          className="dictionary-search"
+          placeholder="Search for word"/>
+        </form>
+        <Results results={result}/>
+      </div>
     </div>
 );
 }

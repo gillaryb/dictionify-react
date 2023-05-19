@@ -5,9 +5,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <main>
-        <Dictionary />
-      </main>
+      <div className="container">
+        <main>
+          <Dictionary />
+        </main>
+      </div>
     </div>
   );
 }

@@ -1,14 +1,29 @@
-.dictionary-form{
-  padding-top: 42px;
+.Dictionary{
+  padding: 16px 24px;
+  height: 80vh;
+  width: 400px;
+  border: 1px solid;
+  margin: 48px 0;
+  background-color: #FFFF;
+  /* margin: 0 auto;
+  width: 300px; */
+}
+ .dictionary-form{
+  padding: 12px 24px;
+  position: relative;
+}
+
+.dictionary-search-icon{
+  position: absolute;
+  top: 24px;
+  left: 34px;
 }
 
 .dictionary-search{
-  padding: 12px 58px;
-  border-radius: 12px;
-  background-color: #FFFF;
-}
-
-.Dictionary{
-  margin: 0 auto;
+  padding: 7px 7px 7px 32px;
   width: 300px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px #b4aeae;
+  border:none;
+  /* background-color: #FFFF; */
 }
