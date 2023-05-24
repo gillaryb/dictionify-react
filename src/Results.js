@@ -5,7 +5,7 @@ import './Results.css';
 
 
 export default function Result(props){
-  // console.log(props.results.meanings[0].definitions[0].definition)
+
   if (props.results) {
     return (
       <div className="Results">
@@ -21,14 +21,19 @@ export default function Result(props){
         </div>
 
 
-        {props.results.meanings.map(function(meaning, index){
+        {/* {props.results.meanings.map(function(meaning, index){
           return (
             <div key={index}>
               <Meaning meaning={meaning}/>
             </div>
           )
-        })}
-        {/* {props.results.meanings[0].definitions[0].definition} */}
+        })} */}
+        <div>
+          <h2>Definition</h2>
+          <hr />
+          <h3>{props.results.meanings[0].partOfSpeech}</h3>
+          <p>{props.results.meanings[0].definitions[0].definition} </p>
+        </div>
         {/* {props.results.meanings[0].definitions[0].definition} */}
       </div>
     )
