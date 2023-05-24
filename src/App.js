@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Dictionary from './Dictionary.js';
 import './App.css';
 
@@ -7,7 +6,7 @@ function App() {
     <div className="App">
       <div className="container">
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="nurture"/>
         </main>
       </div>
     </div>
