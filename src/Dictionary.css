@@ -5,6 +5,7 @@
   box-shadow: 1px 1px 3px #b4aeae;
   margin-top: 48px;
   background-color: #fdfdfd;
+  background-color: #f7f7f7;
   /* margin: 0 auto;
   width: 300px; */
 }
@@ -29,7 +30,8 @@
 }
 
 .dictionary-features{
-  background-color: #F5F6FF;
+  /* background-color: #F5F6FF; */
+  background-color:#f1f2f9;
   box-shadow: 1px 1px 3px #b4aeae;
   height: 80vh;
   width: 800px;

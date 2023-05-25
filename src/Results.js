@@ -5,29 +5,23 @@ import './Results.css';
 
 
 export default function Results(props){
-
+console.log(props.results)
   if (props.results) {
+    const firstPhonetic = props.results.phonetics[0];
     return (
       <div className="Results">
         <div className="results-phonetic">
           <h1 className="results-word">{props.results.word}</h1>
-          {props.results.phonetics.map(function(phonetic, index){
+            <Phonetic phonetic={firstPhonetic} />
+          {/* {props.results.phonetics.map(function(phonetic, index){
             return (
               <div key={index}>
                 <Phonetic phonetic={phonetic}/>
               </div>
             )
-          })}
+          })} */}
         </div>
 
-
-        {/* {props.results.meanings.map(function(meaning, index){
-          return (
-            <div key={index}>
-              <Meaning meaning={meaning}/>
-            </div>
-          )
-        })} */}
         <div className="results-meaning">
           <h2>Definition</h2>
           <hr />
@@ -38,7 +32,6 @@ export default function Results(props){
             {/* {props.results.meanings[0].example} */}
           </p>
         </div>
-        {/* {props.results.meanings[0].definitions[0].definition} */}
       </div>
     )
   } else {
