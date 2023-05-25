@@ -28,11 +28,15 @@ export default function Result(props){
             </div>
           )
         })} */}
-        <div>
+        <div className="results-meaning">
           <h2>Definition</h2>
           <hr />
           <h3>{props.results.meanings[0].partOfSpeech}</h3>
           <p>{props.results.meanings[0].definitions[0].definition} </p>
+          <p>
+            <em>Example:</em>
+            {props.results.meanings[0].definitions[0].definition.example}
+          </p>
         </div>
         {/* {props.results.meanings[0].definitions[0].definition} */}
       </div>

@@ -2,9 +2,9 @@
   padding: 16px 24px;
   height: 80vh;
   width: 400px;
-  border: 1px solid;
-  margin: 48px 0;
-  background-color: #FFFF;
+  box-shadow: 1px 1px 3px #b4aeae;
+  margin-top: 48px;
+  background-color: #fdfdfd;
   /* margin: 0 auto;
   width: 300px; */
 }
@@ -26,4 +26,12 @@
   box-shadow: 1px 1px 3px #b4aeae;
   border:none;
   /* background-color: #FFFF; */
+}
+
+.dictionary-features{
+  background-color: #F5F6FF;
+  box-shadow: 1px 1px 3px #b4aeae;
+  height: 80vh;
+  width: 800px;
+  margin-top: 48px;
 }

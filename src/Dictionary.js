@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Results from './Results';
+import Features from './Features';
+import Definitions from './Definitions';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import './Dictionary.css';
@@ -36,7 +38,7 @@ export default function Dictionary(props){
 
   if (loaded){
     return (
-      <div className="container">
+      <div className="container d-flex">
         <div className="Dictionary">
           <form onSubmit={handleSearch} className="dictionary-form">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="dictionary-search-icon" />
@@ -45,6 +47,12 @@ export default function Dictionary(props){
             placeholder="Search for word"/>
           </form>
           <Results results={result}/>
+        </div>
+        <div className="dictionary-features">
+          <Features results={result}/>
+          <div className="dictionary-definitions">
+            <Definitions results={result}/>
+          </div>
         </div>
       </div>
     );

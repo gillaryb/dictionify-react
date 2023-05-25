@@ -1,0 +1,24 @@
+.Features{
+  margin-top: 24px;
+}
+
+
+.Features ul{
+  list-style-type: none;
+}
+
+.Features li{
+  display: inline-block;
+  padding-right: 32px;
+  padding: 8px 24px;
+  border-radius: 30px;
+  margin-right: 16px;
+  font-weight: bold;
+}
+
+.Features a{
+  text-decoration
+
+  : none;
+  color: black;
+}

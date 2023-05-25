@@ -18,17 +18,7 @@
   display: flex;
   justify-content: space-between;
 }
-/* {props.meaning.definitions.map(function(definition, index){
-  return (
-    <div key={index}>
-      <p>
-        {definition.definition}
-        {/* <em>
-          <strong>Example:</strong>{definition.example}
-        /* </em> */
-        /* <br />
-          <Synonyms synonyms={definition.synonyms} />
-      </p>
-    </div>
-  )
-})} */ 
+
+.results-meaning{
+  padding-top: 16px;
+}
