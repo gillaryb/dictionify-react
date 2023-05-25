@@ -3,7 +3,6 @@ import Meaning from './Meaning';
 import './Definition.css';
 
 export default function Definitions(props){
-  console.log(props.results)
   if (props.results){
     return (
       <div className="Definitions">

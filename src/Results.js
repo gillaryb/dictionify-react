@@ -1,10 +1,10 @@
 import React from 'react';
-import Meaning from './Meaning';
+// import Meaning from './Meaning';
 import Phonetic from './Phonetic';
 import './Results.css';
 
 
-export default function Result(props){
+export default function Results(props){
 
   if (props.results) {
     return (
@@ -35,7 +35,7 @@ export default function Result(props){
           <p>{props.results.meanings[0].definitions[0].definition} </p>
           <p>
             <em>Example:</em>
-            {props.results.meanings[0].definitions[0].definition.example}
+            {/* {props.results.meanings[0].example} */}
           </p>
         </div>
         {/* {props.results.meanings[0].definitions[0].definition} */}

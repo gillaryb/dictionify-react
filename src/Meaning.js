@@ -1,9 +1,8 @@
 import React from 'react';
-import Synonyms from './Synonyms';
+// import Synonyms from './Synonyms';
 import './Meaning.css';
 
 export default function Meaning(props){
- console.log(props.meaning.definitions[0])
   return(
     <div className="Meaning">
       <section>
