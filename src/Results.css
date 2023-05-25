@@ -20,5 +20,9 @@
 }
 
 .results-meaning{
-  padding-top: 16px;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px #b4aeae;
+  padding: 16px;
+  margin-top: 24px;
 }

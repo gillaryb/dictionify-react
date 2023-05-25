@@ -1,6 +1,6 @@
 .Dictionary{
   padding: 16px 24px;
-  height: 80vh;
+  height: 85vh;
   width: 400px;
   box-shadow: 1px 1px 3px #b4aeae;
   margin-top: 48px;
@@ -33,7 +33,7 @@
   /* background-color: #F5F6FF; */
   background-color:#f1f2f9;
   box-shadow: 1px 1px 3px #b4aeae;
-  height: 80vh;
+  height: 85vh;
   width: 800px;
   margin-top: 48px;
 }

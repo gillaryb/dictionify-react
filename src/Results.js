@@ -1,5 +1,6 @@
 import React from 'react';
 // import Meaning from './Meaning';
+import Definitions from './Definitions';
 import Phonetic from './Phonetic';
 import './Results.css';
 
@@ -13,13 +14,6 @@ console.log(props.results)
         <div className="results-phonetic">
           <h1 className="results-word">{props.results.word}</h1>
             <Phonetic phonetic={firstPhonetic} />
-          {/* {props.results.phonetics.map(function(phonetic, index){
-            return (
-              <div key={index}>
-                <Phonetic phonetic={phonetic}/>
-              </div>
-            )
-          })} */}
         </div>
 
         <div className="results-meaning">
@@ -27,10 +21,10 @@ console.log(props.results)
           <hr />
           <h3>{props.results.meanings[0].partOfSpeech}</h3>
           <p>{props.results.meanings[0].definitions[0].definition} </p>
-          <p>
-            <em>Example:</em>
-            {/* {props.results.meanings[0].example} */}
-          </p>
+          <a href="/" className="more-definitions-link">
+            Show more definitions
+            <Definitions results={props.result} />
+          </a>
         </div>
       </div>
     )
