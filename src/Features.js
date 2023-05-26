@@ -4,19 +4,18 @@ import Synonyms from './Synonyms';
 import './Features.css';
 
 export default function Features(props) {
-  console.log(props.results)
-  
-  const [showDefinitions, setDefinitions] = useState(false);
+  const [showDefinitions, setShowDefinitions] = useState(false);
   const [showSynonyms, setShowSynonyms] = useState(false);
 
-
-  const handleDefinittionsClick = (event) => {
+  const handleDefinitionsClick = (event) => {
     event.preventDefault();
-    setDefinitions(true);
-  }
+    setShowDefinitions(true);
+    setShowSynonyms(false);
+  };
 
   const handleSynonymsClick = (event) => {
     event.preventDefault();
+    setShowDefinitions(false);
     setShowSynonyms(true);
   };
 
@@ -24,17 +23,18 @@ export default function Features(props) {
     <div className="Features">
       <ul>
         <li>
-          <a href="/" onClick={handleDefinittionsClick}>Definition</a>
-          {showDefinitions && <Definitions results={props.results}/>}
+          <a href="/" onClick={handleDefinitionsClick}>Definition</a>
         </li>
         <li>
           <a href="/" onClick={handleSynonymsClick}>Synonym</a>
-          {showSynonyms && <Synonyms synonyms={props.results.meanings[0].synonyms} />}
         </li>
         <li>
           <a href="/">Photos</a>
         </li>
       </ul>
+
+      {showDefinitions && <Definitions results={props.results} />}
+      {showSynonyms && <Synonyms synonyms={props.results.meanings[0].synonyms} />}
     </div>
   );
 }

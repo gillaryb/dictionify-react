@@ -1,5 +1,6 @@
 .Results{
   padding-top: 16px;
+  position: relative;
 }
 
 .results-phonetic {
@@ -25,4 +26,10 @@
   box-shadow: 1px 1px 3px #b4aeae;
   padding: 16px;
   margin-top: 24px;
+}
+
+.results-definitions{
+  position: absolute;
+  top: -30px;
+  right: -60px;
 }
