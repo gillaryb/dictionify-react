@@ -2,6 +2,7 @@ import React from 'react';
 import './Meaning.css';
 
 export default function Meaning(props) {
+  console.log(props.meaning)
   const definitions = props.meaning.definitions;
   return (
     <div className="Meaning">

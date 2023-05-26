@@ -50,9 +50,7 @@ export default function Dictionary(props){
         </div>
         <div className="dictionary-features">
           <Features results={result}/>
-          <div className="dictionary-definitions">
-            <Definitions results={result}/>
-          </div>
+          <Definitions results={result}/>
         </div>
       </div>
     );

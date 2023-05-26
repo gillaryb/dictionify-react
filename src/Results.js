@@ -6,7 +6,6 @@ import './Results.css';
 
 
 export default function Results(props){
-console.log(props.results)
   if (props.results) {
     const firstPhonetic = props.results.phonetics[0];
     return (
