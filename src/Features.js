@@ -22,13 +22,13 @@ export default function Features(props) {
   return (
     <div className="Features">
       <ul>
-        <li>
+        <li className="features-li">
           <a href="/" onClick={handleDefinitionsClick}>Definition</a>
         </li>
-        <li>
+        <li className="features-li">
           <a href="/" onClick={handleSynonymsClick}>Synonym</a>
         </li>
-        <li>
+        <li className="features-li">
           <a href="/">Photos</a>
         </li>
       </ul>

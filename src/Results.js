@@ -33,8 +33,7 @@ export default function Results(props) {
             </a>
           )}
         </div>
-
-          <div className="results-definitions"> hello</div>
+        
         {showAllDefinitions && (
           <div className="results-definitions">
             {meanings.slice(2).map((meaning, index) => (
