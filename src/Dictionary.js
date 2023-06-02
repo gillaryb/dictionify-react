@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Results from './Results';
 import Features from './Features';
-import Definitions from './Definitions';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import './Dictionary.css';

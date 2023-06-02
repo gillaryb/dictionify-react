@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Phonetic from './Phonetic';
 import Definitions from './Definitions';
+
 import './Results.css';
 
 export default function Results(props) {
-  const [showAllDefinitions, setShowAllDefinitions] = useState(false);
-  
-
-  const toggleDefinitions = () => {
-    setShowAllDefinitions(!showAllDefinitions);
-  };
-
   if (props.results) {
     const firstPhonetic = props.results.phonetics[0];
-    const meanings = props.results.meanings;
+    const firstMeaning = props.results.meanings[0];
+    const firstDefinition = firstMeaning.definitions[0];
 
     return (
       <div className="Results">
@@ -25,16 +20,13 @@ export default function Results(props) {
         <div className="results-meaning">
           <h2>Definition</h2>
           <hr />
-          <h3>{meanings[0].partOfSpeech}</h3>
-          <p>{meanings[0].definitions[0].definition}</p>
-          {meanings.length > 1 && (
-            <button className="more-definitions-button" onClick={toggleDefinitions}>
-              Show more definitions
-            </button>
-          )}
+          <h3>{firstMeaning.partOfSpeech}</h3>
+          <p>{firstDefinition.definition}</p>
         </div>
 
-        {showAllDefinitions && <Definitions meanings={meanings.slice(1)} />}
+        {/* <div className="results-definitions">
+          <Definitions results={props.results} />
+        </div> */}
       </div>
     );
   } else {

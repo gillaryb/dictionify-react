@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Meaning from './Meaning';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown,faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import './Definition.css';
 
 export default function Definitions(props) {
@@ -34,10 +36,13 @@ export default function Definitions(props) {
             </div>
           ))}
         {!showAllMeanings && meanings.length > 2 && (
-          <button onClick={toggleMeanings}>Show more</button>
+          <button onClick={toggleMeanings}>
+           <FontAwesomeIcon icon={faAngleDown} /></button>
         )}
         {!showInitialMeanings && (
-          <button onClick={handleBackClick}>Back</button>
+          <button onClick={handleBackClick}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </button>
         )}
       </div>
     );

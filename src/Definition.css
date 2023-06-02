@@ -5,3 +5,16 @@ section{
   /* margin: 32px 0; */
   /* border: 1px solid black; */
 }
+
+.Definitions{
+  position: relative;
+}
+
+.Definitions button{
+  border: none;
+  font-size: 28px;
+  background-color: #F1F2F8;
+  position: absolute;
+  bottom: -46px;
+  right: 22px;
+}

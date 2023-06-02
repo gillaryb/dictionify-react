@@ -31,5 +31,6 @@
 .results-definitions{
   position: absolute;
   top: -30px;
-  right: -60px;
+  left: 360px;
+  width: 500px;
 }
