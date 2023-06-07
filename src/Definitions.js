@@ -37,11 +37,11 @@ export default function Definitions(props) {
           ))}
         {!showAllMeanings && meanings.length > 2 && (
           <button onClick={toggleMeanings}>
-           <FontAwesomeIcon icon={faAngleDown} /></button>
+           <FontAwesomeIcon icon={faAngleDown} className="button-icon"/></button>
         )}
         {!showInitialMeanings && (
           <button onClick={handleBackClick}>
-            <FontAwesomeIcon icon={faAngleLeft} />
+            <FontAwesomeIcon icon={faAngleLeft} className="button-icon" />
           </button>
         )}
       </div>
