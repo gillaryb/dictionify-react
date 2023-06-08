@@ -6,13 +6,13 @@ import './Features.css';
 export default function Features({results, toggleDefinitions}) {
   const [showDefinitions, setShowDefinitions] = useState(false);
   const [showSynonyms, setShowSynonyms] = useState(false);
-  const [showPhotos, setShowPhotos] = useState(false);
+  // const [showPhotos, setShowPhotos] = useState(false);
 
   const handleDefinitionsClick = (event) => {
     event.preventDefault();
     setShowDefinitions(true);
     setShowSynonyms(false);
-    setShowPhotos(false);
+    // setShowPhotos(false);
     toggleDefinitions();
   };
 
@@ -20,7 +20,7 @@ export default function Features({results, toggleDefinitions}) {
     event.preventDefault();
     setShowDefinitions(false);
     setShowSynonyms(true);
-    setShowPhotos(false);
+    // setShowPhotos(false);
     toggleDefinitions(false);
   };
 
@@ -28,7 +28,7 @@ export default function Features({results, toggleDefinitions}) {
     event.preventDefault();
     setShowDefinitions(false);
     setShowSynonyms(false);
-    setShowPhotos(true);
+    // setShowPhotos(true);
     toggleDefinitions(false);
   }
 
@@ -49,7 +49,7 @@ export default function Features({results, toggleDefinitions}) {
 
       {showDefinitions && !showSynonyms && <Definitions results={results} />}
       {showSynonyms && <Synonyms synonyms={results.meanings[0].synonyms} />}
-      
+
     </div>
   );
 }
