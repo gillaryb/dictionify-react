@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Results from './Results';
 import Features from './Features';
+import Definitions from './Definitions';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import './Dictionary.css';
@@ -11,6 +12,7 @@ export default function Dictionary(props){
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [result, setResult] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [showDefinitionsComponent, setShowDefinitionsComponent] = useState(true);
 
   function search(){
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
@@ -35,6 +37,10 @@ export default function Dictionary(props){
     search();
   }
 
+  function toggleDefinitions(definitionsVisible){
+    setShowDefinitionsComponent(definitionsVisible);
+  }
+
   if (loaded){
     return (
       <div className="container d-flex">
@@ -48,7 +54,8 @@ export default function Dictionary(props){
           <Results results={result}/>
         </div>
         <div className="dictionary-features">
-          <Features results={result}/>
+          <Features results={result} toggleDefinitions={toggleDefinitions}/>
+          {showDefinitionsComponent ? <Definitions results={result} /> : null}
         </div>
       </div>
     );

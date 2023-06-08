@@ -3,7 +3,7 @@ import Definitions from './Definitions';
 import Synonyms from './Synonyms';
 import './Features.css';
 
-export default function Features(props) {
+export default function Features({results, toggleDefinitions}) {
   const [showDefinitions, setShowDefinitions] = useState(false);
   const [showSynonyms, setShowSynonyms] = useState(false);
 
@@ -11,13 +11,16 @@ export default function Features(props) {
     event.preventDefault();
     setShowDefinitions(true);
     setShowSynonyms(false);
+    toggleDefinitions();
   };
 
   const handleSynonymsClick = (event) => {
     event.preventDefault();
     setShowDefinitions(false);
     setShowSynonyms(true);
+    toggleDefinitions(false);
   };
+
 
   return (
     <div className="Features">
@@ -33,8 +36,8 @@ export default function Features(props) {
         </li>
       </ul>
 
-      {showDefinitions && <Definitions results={props.results} />}
-      {showSynonyms && <Synonyms synonyms={props.results.meanings[0].synonyms} />}
+      {showDefinitions && !showSynonyms && <Definitions results={results} />}
+      {showSynonyms && <Synonyms synonyms={results.meanings[0].synonyms} />}
     </div>
   );
 }
