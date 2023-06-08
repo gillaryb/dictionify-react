@@ -1,6 +1,5 @@
 import React from 'react';
 import Phonetic from './Phonetic';
-import Definitions from './Definitions';
 
 import './Results.css';
 
@@ -23,10 +22,6 @@ export default function Results(props) {
           <h3>{firstMeaning.partOfSpeech}</h3>
           <p>{firstDefinition.definition}</p>
         </div>
-
-        {/* <div className="results-definitions">
-          <Definitions results={props.results} />
-        </div> */}
       </div>
     );
   } else {
