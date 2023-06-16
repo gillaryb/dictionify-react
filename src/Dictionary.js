@@ -12,12 +12,25 @@ export default function Dictionary(props){
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [result, setResult] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
   let [showDefinitionsComponent, setShowDefinitionsComponent] = useState(true);
 
   function search(){
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(apiResponse);
+
+    const pexelsApi = `3gp0FkQLZ594NDTECLpt4HzcmB6x8sGi4g1LVwUnwLsf4gQpwetgpmSy`;
+    const pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    axios.get(pexelsUrl, { headers: {"Authorization" : `${pexelsApi}`} }).then(pexelsResponse)
+    .catch(error => {
+      console.error(error);
+    });
   }
+
+  function pexelsResponse(response){
+    setPhotos(response.data.photos)
+  }
+
 
   function handleSearch(event){
     event.preventDefault();
@@ -54,7 +67,7 @@ export default function Dictionary(props){
           <Results results={result}/>
         </div>
         <div className="dictionary-features">
-          <Features results={result} toggleDefinitions={toggleDefinitions}/>
+          <Features results={result} photos={photos} toggleDefinitions={toggleDefinitions}/>
           {showDefinitionsComponent ? <Definitions results={result} /> : null}
         </div>
       </div>

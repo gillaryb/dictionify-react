@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import Definitions from './Definitions';
 import Synonyms from './Synonyms';
+import Photos from './Photos';
 import './Features.css';
 
-export default function Features({results, toggleDefinitions}) {
+export default function Features({results, photos, toggleDefinitions}) {
   const [showDefinitions, setShowDefinitions] = useState(false);
   const [showSynonyms, setShowSynonyms] = useState(false);
-  // const [showPhotos, setShowPhotos] = useState(false);
+  const [showPhotos, setShowPhotos] = useState(false);
 
   const handleDefinitionsClick = (event) => {
     event.preventDefault();
     setShowDefinitions(true);
     setShowSynonyms(false);
-    // setShowPhotos(false);
+    setShowPhotos(false);
     toggleDefinitions();
   };
 
@@ -20,7 +21,7 @@ export default function Features({results, toggleDefinitions}) {
     event.preventDefault();
     setShowDefinitions(false);
     setShowSynonyms(true);
-    // setShowPhotos(false);
+    setShowPhotos(false);
     toggleDefinitions(false);
   };
 
@@ -28,7 +29,7 @@ export default function Features({results, toggleDefinitions}) {
     event.preventDefault();
     setShowDefinitions(false);
     setShowSynonyms(false);
-    // setShowPhotos(true);
+    setShowPhotos(true);
     toggleDefinitions(false);
   }
 
@@ -49,6 +50,7 @@ export default function Features({results, toggleDefinitions}) {
 
       {showDefinitions && !showSynonyms && <Definitions results={results} />}
       {showSynonyms && <Synonyms synonyms={results.meanings[0].synonyms} />}
+      {showPhotos && <Photos photos={photos}/>}
 
     </div>
   );
