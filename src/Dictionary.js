@@ -63,7 +63,7 @@ export default function Dictionary(props) {
                 <input
                   type="search"
                   onChange={keywordChange}
-                  className="dictionary-search"
+                  className="form-control dictionary-search"
                   placeholder="Search for word"
                 />
               </form>

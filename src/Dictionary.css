@@ -19,15 +19,11 @@
 
 .dictionary-search{
   padding: 7px 7px 7px 32px;
-  width: 300px;
-  border-radius: 4px;
   box-shadow: 1px 1px 3px #b4aeae;
   border:none;
-  /* background-color: #FFFF; */
 }
 
 .dictionary-features{
-  /* background-color: #F5F6FF; */
   background-color:#f1f2f9;
   box-shadow: 1px 1px 3px #b4aeae;
   height: 85vh;
