@@ -16,7 +16,6 @@ export default function Photos(props){
             </div>
           )
         })}
-
       </div>
     </section>
   )

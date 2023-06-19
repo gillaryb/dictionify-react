@@ -8,6 +8,7 @@ export default function Features({results, photos, toggleDefinitions}) {
   const [showDefinitions, setShowDefinitions] = useState(false);
   const [showSynonyms, setShowSynonyms] = useState(false);
   const [showPhotos, setShowPhotos] = useState(false);
+  let isActive = true;
 
   const handleDefinitionsClick = (event) => {
     event.preventDefault();
@@ -15,6 +16,7 @@ export default function Features({results, photos, toggleDefinitions}) {
     setShowSynonyms(false);
     setShowPhotos(false);
     toggleDefinitions();
+
   };
 
   const handleSynonymsClick = (event) => {
@@ -36,15 +38,15 @@ export default function Features({results, photos, toggleDefinitions}) {
 
   return (
     <div className="Features">
-      <ul>
-        <li className="features-li">
-          <a href="/" onClick={handleDefinitionsClick}>Definition</a>
+      <ul className="button row text-center">
+        <li className="col-3 col-sm-4">
+          <a href="/" onClick={handleDefinitionsClick} className="link">Definition</a>
         </li>
-        <li className="features-li">
-          <a href="/" onClick={handleSynonymsClick}>Synonym</a>
+        <li className="col-3 col-sm-4">
+          <a href="/" onClick={handleSynonymsClick} className="link">Synonym</a>
         </li>
-        <li className="features-li">
-          <a href="/" onClick={handlePhotosClick}>Photos</a>
+        <li className="col-3 col-sm-4">
+          <a href="/" onClick={handlePhotosClick} className="link">Photos</a>
         </li>
       </ul>
 

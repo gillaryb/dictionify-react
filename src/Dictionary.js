@@ -56,7 +56,7 @@ export default function Dictionary(props) {
     return (
       <div className="container">
         <div className="row d-flex">
-          <div className="col-12 col-md-6 col-lg-4 p-0">
+          <div className="col-12 col-md-4 col-lg-4 p-0">
             <div className="Dictionary">
               <form onSubmit={handleSearch} className="dictionary-form">
                 <FontAwesomeIcon icon={faMagnifyingGlass} className="dictionary-search-icon" />
@@ -70,7 +70,7 @@ export default function Dictionary(props) {
               <Results results={result} />
             </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-8 p-0">
+          <div className="col-12 col-md-8 col-lg-8 p-0">
             <div className="dictionary-features">
               <Features results={result} photos={photos} toggleDefinitions={toggleDefinitions} />
               {showDefinitionsComponent ? <Definitions results={result} /> : null}

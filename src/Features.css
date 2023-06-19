@@ -2,28 +2,39 @@
   margin-top: 24px;
 }
 
-
-.Features ul{
+.Features .button{
   list-style-type: none;
+  padding: 24px 24px 12px 24px;
+  margin-bottom: 0px;
 }
 
-.features-li{
+.Features li{
   display: inline-block;
-  padding-right: 32px;
-  padding: 8px 24px;
-  border-radius: 30px;
-  margin-right: 16px;
-  font-weight: bold;
-  border: 1px solid#0d3b66d9;
-  color: white;
-  background: #0d3b66d9;
-  font-weight: 500;
 }
 
-
-.Features a{
+.Features .link{
   text-decoration
 
   : none;
   color: white;
+  display: inline-block;
+  padding-right: 32px;
+  padding: 8px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: 1px solid#0d3b66d9;
+  color: white;
+  background-color: #0d3b66d9;
+  font-weight: 500;
+  margin-left:0;
+}
+
+.Features .link:hover{
+  color: #413543;
+  background:#FFB84C;
+  border: 1px solid #FFB84C;
+}
+
+.Features .icon{
+  display: none
 }
