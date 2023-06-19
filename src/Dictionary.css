@@ -1,13 +1,10 @@
 .Dictionary{
   padding: 16px 24px;
   height: 85vh;
-  width: 400px;
   box-shadow: 1px 1px 3px #b4aeae;
   margin-top: 48px;
   background-color: #fdfdfd;
   background-color: #f7f7f7;
-  /* margin: 0 auto;
-  width: 300px; */
 }
  .dictionary-form{
   padding: 12px 24px;
@@ -34,6 +31,5 @@
   background-color:#f1f2f9;
   box-shadow: 1px 1px 3px #b4aeae;
   height: 85vh;
-  width: 800px;
   margin-top: 48px;
 }

@@ -11,10 +11,6 @@ export default function Meaning(props) {
         {definitions.slice(0, 3).map((definition, index) => (
           <div key={index}>
             <p>{definition.definition}</p>
-            {/* <em>
-              <strong>Example:</strong>{definition.example}
-            </em> */}
-            {/* <Synonyms synonyms={definition.synonyms} /> */}
           </div>
         ))}
       </section>
