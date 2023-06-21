@@ -8,7 +8,6 @@ export default function Features({results, photos, toggleDefinitions}) {
   const [showDefinitions, setShowDefinitions] = useState(false);
   const [showSynonyms, setShowSynonyms] = useState(false);
   const [showPhotos, setShowPhotos] = useState(false);
-  let isActive = true;
 
   const handleDefinitionsClick = (event) => {
     event.preventDefault();
