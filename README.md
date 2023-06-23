@@ -1,4 +1,4 @@
-#Dictionify
+# Dictionify
 
 Web application made in React.js that uses Dictionary API to fetch data and displays word
 definitions, spellings, pronunciations, synonyms, and other information about words and phrases.
