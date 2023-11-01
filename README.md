@@ -1,8 +1,11 @@
 # Dictionify
 
-Web application made in React.js that uses Dictionary API to fetch data and displays word
+A Web application made in React.js that uses Dictionary API to fetch data and displays word
 definitions, spellings, pronunciations, synonyms, and other information about words and phrases.
 [See more](https://dictionify.live/)
+
+React.jsを使用したWebアプリケーションです。このアプリケーションはDictionary APIを利用してデータを取得し、単語の定義、綴り、発音、類義語、および他の単語やフレーズに関する情報を表示します。
+[続き見る](https://dictionify.live/)
 <img width="1160" alt="dictionify" src="https://github.com/gillaryb/dictionify-react/assets/111226617/b29e725f-8f17-47e8-8229-0c6c9d230014">
 
 ## Build With
